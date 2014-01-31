@@ -1,0 +1,59 @@
+@import 'aw-variables';
+@import 'aw-mixins';
+@import '../bower_components/foundation/scss/foundation/functions';
+
+body {
+	width: 100%;
+	margin: 3rem;
+	background-color: white;
+	font-family: "myriad-pro",sans-serif;
+	color: darken($airwootTheme, 50%);
+}
+
+h1, h2, h3, p, .button {
+	font-family: "myriad-pro";
+	font-weight: 300;
+	color: darken($airwootTheme, 30%);
+}
+
+h1 {
+	font-size: 1.5rem;
+}
+
+h2 {
+	font-size: 1rem;
+	margin: 2rem 0 1rem 0;
+}
+
+h3 {
+	font-size: .75rem;
+}
+
+label {
+	font-family: $myriad;
+	font-weight: 400;
+	font-size: 0.75rem;
+	color: darken($clouds, 40%);
+	margin: 1rem 0 0;
+}
+
+input, input[type="text"], input[type="password"], textarea {
+	border: 2px solid darken($clouds, 5%);
+	font-family: $myriad;
+	font-size: 1rem;
+	margin: rem-calc(3) 0 0;
+	padding: rem-calc(5);
+	color: darken($clouds, 40%);
+	line-height: 1.5;
+	outline: none;
+	&::-webkit-input-placeholder {
+		font-size: 0.75rem;
+		color: darken($clouds, 10%);
+		line-height: 2
+	}
+
+	&:focus {
+		color: darken($clouds, 50%);
+		border: 2px solid darken($clouds, 20%);
+	}
+}

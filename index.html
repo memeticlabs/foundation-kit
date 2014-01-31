@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Design Language Airwoot</title>
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+    <link href="./stylesheets/elements.css" rel="stylesheet">
+    <script src="//use.typekit.net/jnu8aad.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
+  </head>
+  <body>
+    <div id="main" role="main" class="row">
+      <div class="columns small-12">
+        <section class="aw-top-bar-container">
+          <h2>Navigation</h2>
+          <nav data-topbar class="top-bar contain-to-grid">
+            <ul class="title-area">
+              <li class="name">
+                <h1><a class="href">Airwoot</a></h1>
+              </li>
+            </ul>
+            <section class="top-bar-section">
+              <ul class="right">
+                <li class="has-dropdown"><a href="#">Analytics</a>
+                  <ul class="dropdown">
+                    <li><a href="#">Ticket Traffic</a></li>
+                    <li><a href="#">Daily Cases</a></li>
+                    <li><a href="#">SLA</a></li>
+                    <li><a href="#">Label Distribution</a></li>
+                    <li><a href="#">Download</a></li>
+                    <li><a href="#">Ticket Report</a></li>
+                    <li><a href="#">Email</a></li>
+                  </ul>
+                </li>
+                <li class="has-dropdown"><a href="#">Workflow</a></li>
+                <li class="has-dropdown"><a href="#">Preferences</a></li>
+                <li class="has-dropdown"><a href="#">Help</a></li>
+              </ul>
+            </section>
+          </nav>
+        </section>
+        <section class="buttons container">
+          <h2>Buttons</h2>
+          <div class="active-state"><a href="#" class="button tiny">Ticket ID: 8978567</a><a href="#" class="button small">Edit</a><a href="#" class="button medium">Login</a><a href="#" class="button large">Connect Facebook     </a></div>
+          <div class="disabled-state"><a class="button tiny disabled">Ticket ID: 8978567</a><a class="button small disabled">Edit</a><a href="#" class="button medium disabled">Login</a><a href="#" class="button large disabled">Connect Facebook</a></div>
+        </section>
+        <section class="forms-container">
+          <h2>Forms</h2>
+          <label>First Name</label>
+          <input placeholder="First Name">
+          <label>Last Name</label>
+          <input placeholder="Last Name">
+        </section>
+      </div>
+    </div>
+    <script src="./bower_components/jquery/jquery.js"> </script>
+    <script src="./bower_components/underscore/underscore.js"> </script>
+    <script src="./bower_components/foundation/js/foundation.js"></script>
+    <script src="./bower_components/foundation/js/foundation/foundation.topbar.js"></script>
+    <script src="./js/app.js"></script>
+  </body>
+</html>

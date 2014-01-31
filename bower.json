@@ -1,0 +1,27 @@
+{
+  "name": "Design Language @ Airwoot",
+  "version": "0.0.0",
+  "authors": [
+    "Arijit Bhattacharya <hoodwink73@live.com>"
+  ],
+  "description": "We are on a sprint to unify design aesthetics through out our Airwoot app. That includes settling on the design of ui-elements like button, nave, pills, sidebar help etc.",
+  "main": "index.html",
+  "keywords": [
+    "design",
+    "ui"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation": "~5.0.3",
+    "backbone": "~1.1.0",
+    "underscore": "~1.5.2"
+  }
+}

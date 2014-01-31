@@ -1,0 +1,68 @@
+doctype html
+html(lang="en")
+    head
+        title Design Language Airwoot
+        link(href="http://fonts.googleapis.com/css?family=Lato:300,400,700", rel="stylesheet")
+        link(href="./stylesheets/elements.css", rel="stylesheet")
+        script(src="//use.typekit.net/jnu8aad.js")
+        script
+            try{Typekit.load();}catch(e){}
+    body
+        div#main.row(role="main")
+            div.columns.small-12
+                //- Top Nav Bar
+                section.aw-top-bar-container
+                    h2 Navigation
+                    nav.top-bar.contain-to-grid(data-topbar)
+                        ul.title-area
+                            li.name: h1: a.href Airwoot
+                        section.top-bar-section
+                            ul.right
+                                li.has-dropdown
+                                    a(href="#") Analytics
+                                    ul.dropdown
+                                        li: a(href="#") Ticket Traffic
+                                        li: a(href="#") Daily Cases
+                                        li: a(href="#") SLA
+                                        li: a(href="#") Label Distribution
+                                        li: a(href="#") Download
+                                        li: a(href="#") Ticket Report
+                                        li: a(href="#") Email
+
+                                li.has-dropdown: a(href="#") Workflow
+                                li.has-dropdown: a(href="#") Preferences
+                                li.has-dropdown: a(href="#") Help
+
+
+                //- Buttons
+                section.buttons.container
+                    h2 Buttons
+
+                    div.active-state
+                        a.button.tiny(href="#") Ticket ID: 8978567
+                        a.button.small(href="#") Edit
+                        a.button.medium(href="#") Login
+                        a.button.large(href="#") Connect Facebook     
+
+                    div.disabled-state
+                        a.button.tiny.disabled Ticket ID: 8978567
+                        a.button.small.disabled Edit
+                        a.button.medium.disabled(href="#") Login
+                        a.button.large.disabled(href="#") Connect Facebook
+
+
+                section.forms-container
+                    h2 Forms
+
+                    label First Name
+                    input(placeholder="First Name")
+
+                    label Last Name
+                    input(placeholder="Last Name")
+
+        script(src="./bower_components/jquery/jquery.js") 
+        script(src="./bower_components/underscore/underscore.js") 
+        script(src="./bower_components/foundation/js/foundation.js")
+        script(src="./bower_components/foundation/js/foundation/foundation.topbar.js")
+        script(src="./js/app.js")
+

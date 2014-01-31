@@ -1,0 +1,55 @@
+@import 'aw-variables';
+@import 'aw-mixins';
+@import '../bower_components/foundation/scss/foundation.scss';
+@import '../bower_components/foundation/scss/foundation/functions';
+@import 'aw-base';
+
+.top-bar {
+	letter-spacing: rem-calc(1);
+	.top-bar-section {
+		.has-dropdown {
+			li a{
+				background: darken($topbar-bg, 5%);
+				font-family: $helvetica;
+				font-size: $aw-topbar-dropdown-fontsize;
+				font-weight: 400;
+				letter-spacing: 0.1rem;
+				line-height: 3;
+
+				&:hover {
+					background-color: lighten($topbar-bg, 5%);
+				}
+			}
+		}
+	}
+}
+
+.button {
+	background-color: $airwootTheme;
+	margin: $button-margin-bottom 1rem ; // for presentation
+
+	
+	&.disabled {
+		background-color: $airwootTheme;
+	}
+
+	&:hover {
+		background-color: darken($airwootTheme, 5%);
+		color: darken($airwootTheme, 25%);
+		&.disabled {
+			background-color: $airwootTheme;
+		}
+	}
+
+	&:first-of-type {
+		margin-left: 0;
+	}
+
+	&:last-of-type {
+		margin-right: 0;
+	}
+
+}
+
+
+
