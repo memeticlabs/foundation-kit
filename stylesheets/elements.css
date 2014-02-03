@@ -1987,7 +1987,7 @@ button, .button {
   border-style: solid;
   border-width: 0;
   cursor: pointer;
-  font-family: "myriad-pro", "Helvatica Nueue", "Helvetica", "Arial", sans-serif;
+  font-family: "proxima-nova", "Helvatica Nueue", "Helvetica", "Arial", sans-serif;
   font-weight: normal;
   line-height: normal;
   margin: 0 0 1.25rem;
@@ -4343,7 +4343,7 @@ div.switch span:last-child {
   background: white;
   background: -moz-linear-gradient(top, white 0%, #f2f2f2 100%);
   background: -webkit-linear-gradient(top, white 0%, #f2f2f2 100%);
-  background: linear-gradient(to bottom, white 0%, #f2f2f2 100%);
+  background: linear, to bottom, white 0%, #f2f2f2 100%;
   -webkit-box-shadow: 2px 0 10px 0 rgba(0, 0, 0, 0.07), 1000px 0 0 1000px #f3faf6, -2px 0 10px 0 rgba(0, 0, 0, 0.07), -1000px 0 0 1000px whitesmoke;
   box-shadow: 2px 0 10px 0 rgba(0, 0, 0, 0.07), 1000px 0 0 980px #f3faf6, -2px 0 10px 0 rgba(0, 0, 0, 0.07), -1000px 0 0 1000px whitesmoke;
 }
@@ -4351,7 +4351,7 @@ div.switch:hover span:last-child, div.switch:focus span:last-child {
   background: white;
   background: -moz-linear-gradient(top, white 0%, #e6e6e6 100%);
   background: -webkit-linear-gradient(top, white 0%, #e6e6e6 100%);
-  background: linear-gradient(to bottom, white 0%, #e6e6e6 100%);
+  background: linear, to bottom, white 0%, #e6e6e6 100%;
 }
 div.switch:active {
   background: transparent;
@@ -4846,14 +4846,14 @@ meta.foundation-mq-topbar {
   color: white;
   padding: 12px 0 12px 0;
   padding-left: 16.66667px;
-  font-family: "myriad-pro", "Helvatica Nueue", "Helvetica", "Arial", sans-serif;
-  font-size: 0.75rem;
+  font-family: "proxima-nova", "Helvatica Nueue", "Helvetica", "Arial", sans-serif;
+  font-size: 0.875rem;
   font-weight: 400;
   background: #333333;
 }
 .top-bar-section ul li > a.button {
   background: #008cba;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   padding-right: 16.66667px;
   padding-left: 16.66667px;
 }
@@ -4879,11 +4879,11 @@ meta.foundation-mq-topbar {
   background: #d42b0f;
 }
 .top-bar-section ul li:hover > a {
-  background: tint(#606269, 30%);
+  background: #8f9196;
   color: white;
 }
 .top-bar-section ul li.active > a {
-  background: shade(#c3c6d2, 30%);
+  background: #888a93;
   color: white;
 }
 .top-bar-section ul li.active > a:hover {
@@ -5016,7 +5016,7 @@ meta.foundation-mq-topbar {
     display: none;
   }
   .top-bar-section li.hover > a:not(.button) {
-    background: tint(#606269, 30%);
+    background: #8f9196;
     color: white;
   }
   .top-bar-section li:not(.has-form) a:not(.button) {
@@ -5025,7 +5025,7 @@ meta.foundation-mq-topbar {
     background: #606269;
   }
   .top-bar-section li:not(.has-form) a:not(.button):hover {
-    background: tint(#606269, 30%);
+    background: #8f9196;
   }
   .top-bar-section .has-dropdown > a {
     padding-right: 36.66667px !important;
@@ -5108,11 +5108,11 @@ meta.foundation-mq-topbar {
   }
 
   .no-js .top-bar-section ul li:hover > a {
-    background: tint(#606269, 30%);
+    background: #8f9196;
     color: white;
   }
   .no-js .top-bar-section ul li:active > a {
-    background: shade(#c3c6d2, 30%);
+    background: #888a93;
     color: white;
   }
   .no-js .top-bar-section .has-dropdown:hover > .dropdown {
@@ -6297,55 +6297,315 @@ body {
   width: 100%;
   margin: 3rem;
   background-color: white;
-  font-family: "myriad-pro",sans-serif;
+  font-family: "proxima-nova", "Helvatica Nueue", "Helvetica", "Arial", sans-serif;
   color: #404556;
 }
 
-h1, h2, h3, p, .button {
-  font-family: "myriad-pro";
+h1, h2, h3, h4, p, .button {
+  font-family: "proxima-nova", "Helvatica Nueue", "Helvetica", "Arial", sans-serif;
   font-weight: 300;
   color: #6c7390;
 }
 
 h1 {
-  font-size: 1.5rem;
+  font-size: 3.17685rem;
 }
 
 h2 {
-  font-size: 1rem;
-  margin: 2rem 0 1rem 0;
+  font-size: 1.96344rem;
 }
 
 h3 {
-  font-size: .75rem;
+  font-size: 1.2135rem;
+}
+
+h4 {
+  font-size: 0.9375rem;
 }
 
 label {
-  font-family: "myriad-pro", "Helvatica Nueue", "Helvetica", "Arial", sans-serif;
+  font-family: "proxima-nova", "Helvatica Nueue", "Helvetica", "Arial", sans-serif;
   font-weight: 400;
   font-size: 0.75rem;
   color: #77939a;
   margin: 1rem 0 0;
 }
 
-input, input[type="text"], input[type="password"], textarea {
+input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="url"], input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="time"], input[type="week"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
   border: 2px solid #dde4e6;
-  font-family: "myriad-pro", "Helvatica Nueue", "Helvetica", "Arial", sans-serif;
+  font-family: "proxima-nova", "Helvatica Nueue", "Helvetica", "Arial", sans-serif;
   font-size: 1rem;
   margin: 0.1875rem 0 0;
   padding: 0.3125rem;
   color: #77939a;
   line-height: 1.5;
   outline: none;
+  box-shadow: none;
 }
-input::-webkit-input-placeholder, input[type="text"]::-webkit-input-placeholder, input[type="password"]::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+input[type="email"]::-webkit-input-placeholder, input[type="number"]::-webkit-input-placeholder, input[type="password"]::-webkit-input-placeholder, input[type="search"]::-webkit-input-placeholder, input[type="tel"]::-webkit-input-placeholder, input[type="text"]::-webkit-input-placeholder, input[type="url"]::-webkit-input-placeholder, input[type="color"]::-webkit-input-placeholder, input[type="date"]::-webkit-input-placeholder, input[type="datetime"]::-webkit-input-placeholder, input[type="datetime-local"]::-webkit-input-placeholder, input[type="month"]::-webkit-input-placeholder, input[type="time"]::-webkit-input-placeholder, input[type="week"]::-webkit-input-placeholder {
   font-size: 0.75rem;
   color: #cfd9db;
   line-height: 2;
 }
-input:focus, input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
+input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="url"]:focus, input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus {
+  box-shadow: none;
   color: #5e7980;
   border: 2px solid #b1c2c6;
+}
+
+input[type="checkbox"], input[type="radio"] {
+  display: none;
+  position: relative;
+}
+input[type="checkbox"] + label, input[type="radio"] + label {
+  color: #94aab0;
+  position: relative;
+  font-size: 0.85rem;
+  font-weight: 300;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+input[type="checkbox"] + label:before, input[type="radio"] + label:before {
+  -webkit-transition: border-color 0.6s;
+  -moz-transition: border-color 0.6s;
+  transition: border-color 0.6s;
+  content: '';
+  position: relative;
+  margin-right: 4px;
+  vertical-align: text-bottom;
+  display: inline-block;
+  background-color: #ecf0f1;
+  border: 2px solid #dde4e6;
+}
+input[type="checkbox"]:checked + label, input[type="radio"]:checked + label {
+  color: #77939a;
+}
+input[type="checkbox"]:checked + label:before, input[type="radio"]:checked + label:before {
+  border-color: #94aab0;
+}
+input[type="checkbox"]:checked + label:after, input[type="radio"]:checked + label:after {
+  content: '';
+  display: block;
+}
+
+input[type="checkbox"] + label:before {
+  width: 22px;
+  height: 20px;
+  border-radius: 0;
+}
+input[type="checkbox"]:checked + label:after {
+  -webkit-animation: check 0.8s;
+  -moz-animation: check 0.8s;
+  animation: check 0.8s;
+  -webkit-transform: scaleX(-1) rotate(135deg);
+  -moz-transform: scaleX(-1) rotate(135deg);
+  -ms-transform: scaleX(-1) rotate(135deg);
+  -o-transform: scaleX(-1) rotate(135deg);
+  transform: scaleX(-1) rotate(135deg);
+  -webkit-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -o-transform-origin: 0 0;
+  transform-origin: 0 0;
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  border-right: 3px solid #94aab0;
+  border-top: 3px solid #94aab0;
+  height: 12.5px;
+  width: 6.66667px;
+}
+
+input[type="radio"] + label:before {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+}
+input[type="radio"]:checked + label:after {
+  -webkit-animation: radio 0.6s;
+  -moz-animation: radio 0.6s;
+  animation: radio 0.6s;
+  position: relative;
+  bottom: 15px;
+  left: 5px;
+  -webkit-transform-origin: center center;
+  -moz-transform-origin: center center;
+  -ms-transform-origin: center center;
+  -o-transform-origin: center center;
+  transform-origin: center center;
+  width: 10px;
+  height: 10px;
+  border: none;
+  background-color: #94aab0;
+  border-radius: 10px;
+}
+
+@-webkit-keyframes check {
+  0% {
+    height: 0;
+    width: 0;
+  }
+
+  25% {
+    height: 0;
+    width: 6.66667px;
+  }
+
+  50% {
+    height: 12.5px;
+    width: 6.66667px;
+  }
+}
+
+@-moz-keyframes check {
+  0% {
+    height: 0;
+    width: 0;
+  }
+
+  25% {
+    height: 0;
+    width: 6.66667px;
+  }
+
+  50% {
+    height: 12.5px;
+    width: 6.66667px;
+  }
+}
+
+@-o-keyframes check {
+  0% {
+    height: 0;
+    width: 0;
+  }
+
+  25% {
+    height: 0;
+    width: 6.66667px;
+  }
+
+  50% {
+    height: 12.5px;
+    width: 6.66667px;
+  }
+}
+
+@keyframes check {
+  0% {
+    height: 0;
+    width: 0;
+  }
+
+  25% {
+    height: 0;
+    width: 6.66667px;
+  }
+
+  50% {
+    height: 12.5px;
+    width: 6.66667px;
+  }
+}
+
+@-webkit-keyframes radio {
+  0% {
+    -webkit-transform: scale(0);
+  }
+
+  25% {
+    -webkit-transform: scale(0.25);
+  }
+
+  50% {
+    -webkit-transform: scale(0.5);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+  }
+}
+
+@-moz-keyframes radio {
+  0% {
+    -moz-transform: scale(0);
+  }
+
+  25% {
+    -moz-transform: scale(0.25);
+  }
+
+  50% {
+    -moz-transform: scale(0.5);
+  }
+
+  100% {
+    -moz-transform: scale(1);
+  }
+}
+
+@-o-keyframes radio {
+  0% {
+    -o-transform: scale(0);
+  }
+
+  25% {
+    -o-transform: scale(0.25);
+  }
+
+  50% {
+    -o-transform: scale(0.5);
+  }
+
+  100% {
+    -o-transform: scale(1);
+  }
+}
+
+@keyframes radio {
+  0% {
+    transform: scale(0);
+  }
+
+  25% {
+    transform: scale(0.25);
+  }
+
+  50% {
+    transform: scale(0.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.header-container {
+  *zoom: 1;
+  margin: 0 0 30px 0;
+}
+.header-container:before, .header-container:after {
+  content: " ";
+  display: table;
+}
+.header-container:after {
+  clear: both;
+}
+
+h1, h2, h3, h4 {
+  height: 50.82961px;
+  line-height: 50.82961px;
+  float: left;
+  display: inline-block;
+  vertical-align: text-bottom;
+  margin: 0 20px 0 0;
 }
 
 .top-bar {
@@ -6353,10 +6613,10 @@ input:focus, input[type="text"]:focus, input[type="password"]:focus, textarea:fo
 }
 .top-bar .top-bar-section .has-dropdown li a {
   background: #54555c;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 0.6875rem;
+  font-family: "proxima-nova", "Helvatica Nueue", "Helvetica", "Arial", sans-serif;
+  font-size: 0.8125rem;
   font-weight: 400;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.0625rem;
   line-height: 3;
 }
 .top-bar .top-bar-section .has-dropdown li a:hover {

@@ -3,17 +3,20 @@
 
 
 // colors
+$nephritis: #27ae60;
 $clouds: #ecf0f1;
 $airwootTheme: #c3c6d2;
 
 
 // typography
 $myriad: "myriad-pro", "Helvatica Nueue", "Helvetica", "Arial", sans-serif;
-$helvetica: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$proxima: "proxima-nova", "Helvatica Nueue", "Helvetica", "Arial", sans-serif;
 $lato: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$typography-rhythm-base: 12px;
 
 
-
+// Airwoot Specific Variables
+$aw-select-box-size: 20px;
 
 // ---------
 // Top Bar
@@ -32,12 +35,12 @@ $topbar-margin-bottom: rem-calc(30);
 $topbar-input-height: rem-calc(30);
 
 /* Controlling the styles for the title in the top bar */
-$topbar-title-font: $myriad;
+$topbar-title-font: $proxima;
 $topbar-title-weight: 300;
 $topbar-title-font-size: rem-calc(22);
 
 /* Style the top bar dropdown elements */
-$aw-topbar-dropdown-fontsize: rem-calc(11);
+$aw-topbar-dropdown-fontsize: rem-calc(13);
 $topbar-dropdown-toggle-size: 3px;
 $topbar-dropdown-toggle-color: #fff;
 $topbar-dropdown-toggle-alpha: 0.5;
@@ -49,12 +52,12 @@ $topbar-link-color-hover: #fff;
 $topbar-link-color-active: #fff;
 $topbar-link-color-active-hover: #fff;
 $topbar-link-weight: 400;
-$topbar-link-font-size: rem-calc(12);
+$topbar-link-font-size: rem-calc(14);
 $topbar-link-hover-lightness: -10%; // Darken by 10%
 $topbar-link-bg-hover: tint($topbar-bg, 30%) ;
 $topbar-link-bg-active: shade($airwootTheme, 30%);
 $topbar-link-bg-active-hover: scale-color($airwootTheme, $lightness: -14%);
-$topbar-link-font-family: $myriad;
+$topbar-link-font-family: $proxima;
 
 $topbar-dropdown-label-color: #555;
 $topbar-dropdown-label-text-transform: uppercase;
@@ -77,7 +80,7 @@ $button-display: inline-block;
 $button-margin-bottom: rem-calc(20);
 
 // We use these to control button text styles.
-$button-font-family: $myriad;
+$button-font-family: $proxima;
 $button-font-color: darken($airwootTheme, 30%);
 $button-font-color-alt: darken($airwootTheme, 35%);
 $button-font-med: rem-calc(14);

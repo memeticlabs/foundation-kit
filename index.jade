@@ -12,7 +12,6 @@ html(lang="en")
             div.columns.small-12
                 //- Top Nav Bar
                 section.aw-top-bar-container
-                    h2 Navigation
                     nav.top-bar.contain-to-grid(data-topbar)
                         ul.title-area
                             li.name: h1: a.href Airwoot
@@ -33,10 +32,25 @@ html(lang="en")
                                 li.has-dropdown: a(href="#") Preferences
                                 li.has-dropdown: a(href="#") Help
 
+                //- Headings
+                section.header-container
+                    h1 Airwoot
+                    h2 Dashboard
+                    h3 Launch Facebook Helpdesk
+                    h4 Response Time
+
+                div.row
+                    div.columns.small-12.large-6
+                        :markdown
+                            Seamlessly connect your social channels to the app. 
+                            Get *realtime* notifications directly in your browser 
+                            whenever a customer wants to engage with you.
+                             
+                            **Never** miss out on any messages.
+
 
                 //- Buttons
                 section.buttons.container
-                    h2 Buttons
 
                     div.active-state
                         a.button.tiny(href="#") Ticket ID: 8978567
@@ -50,15 +64,37 @@ html(lang="en")
                         a.button.medium.disabled(href="#") Login
                         a.button.large.disabled(href="#") Connect Facebook
 
+                div.row
+                    div.columns.small-12.large-6
+                        //- Form Elements
+                        section.forms-container
 
-                section.forms-container
-                    h2 Forms
 
-                    label First Name
-                    input(placeholder="First Name")
+                            section.text-input-container
+                                label First Name
+                                input(type="text", placeholder="First Name")
 
-                    label Last Name
-                    input(placeholder="Last Name")
+                                label Last Name
+                                input(type="text", placeholder="Last Name")
+
+
+                            section.checkbox-container
+                                input(type="checkbox", id="facebook", checked)
+                                label(for="facebook") Facebook
+
+                                input(type="checkbox", id="twitter") 
+                                label(for="twitter") Twitter
+
+                                input(type="checkbox", id="admin") 
+                                label(for="admin") Admin
+
+
+                            input(type="radio", id="social-network-facebook", name="social-network", value="facebook")
+                            label(for="social-network-facebook") Facebook
+
+                            input(type="radio", id="social-network-twitter", name="social-network", value="twitter", checked)
+                            label(for="social-network-twitter") Twitter
+
 
         script(src="./bower_components/jquery/jquery.js") 
         script(src="./bower_components/underscore/underscore.js") 

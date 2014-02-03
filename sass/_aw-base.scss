@@ -1,3 +1,4 @@
+@import '../bower_components/bower-bourbon/bourbon';
 @import 'aw-variables';
 @import 'aw-mixins';
 @import '../bower_components/foundation/scss/foundation/functions';
@@ -6,54 +7,161 @@ body {
 	width: 100%;
 	margin: 3rem;
 	background-color: white;
-	font-family: "myriad-pro",sans-serif;
+	font-family: $proxima;
 	color: darken($airwootTheme, 50%);
 }
 
-h1, h2, h3, p, .button {
-	font-family: "myriad-pro";
+h1, h2, h3, h4, p, .button {
+	font-family: $proxima;
 	font-weight: 300;
 	color: darken($airwootTheme, 30%);
 }
 
 h1 {
-	font-size: 1.5rem;
+	font-size: rem-calc(golden-ratio($typography-rhythm-base, 3));
 }
 
 h2 {
-	font-size: 1rem;
-	margin: 2rem 0 1rem 0;
+	font-size: rem-calc(golden-ratio($typography-rhythm-base, 2));
 }
 
 h3 {
-	font-size: .75rem;
+	font-size: rem-calc(golden-ratio($typography-rhythm-base, 1));
+}
+
+h4 {
+	font-size: rem-calc($typography-rhythm-base * 1.25);
 }
 
 label {
-	font-family: $myriad;
+	font-family: $proxima;
 	font-weight: 400;
 	font-size: 0.75rem;
 	color: darken($clouds, 40%);
 	margin: 1rem 0 0;
 }
 
-input, input[type="text"], input[type="password"], textarea {
+#{$all-text-inputs} {
+	@include appearance(none);
 	border: 2px solid darken($clouds, 5%);
-	font-family: $myriad;
+	font-family: $proxima;
 	font-size: 1rem;
 	margin: rem-calc(3) 0 0;
 	padding: rem-calc(5);
 	color: darken($clouds, 40%);
 	line-height: 1.5;
 	outline: none;
+	box-shadow: none;
 	&::-webkit-input-placeholder {
 		font-size: 0.75rem;
 		color: darken($clouds, 10%);
-		line-height: 2
+		line-height: 2;
 	}
 
 	&:focus {
+		box-shadow: none;
 		color: darken($clouds, 50%);
 		border: 2px solid darken($clouds, 20%);
 	}
 }
+
+input[type="checkbox"], input[type="radio"] {
+	display: none;
+	position: relative;
+	& + label {
+		color: darken($clouds, 30%);
+		position: relative;
+		font-size: 0.85rem;
+		font-weight: 300;
+		@include user-select(none);
+		&:before {
+			// this creates the box
+			@include transition(border-color 0.6s);
+			content: '';
+			position: relative;
+			margin-right: 4px;
+			vertical-align: text-bottom;
+			display: inline-block;
+			background-color: $clouds;
+			border: 2px solid darken($clouds, 5%);
+		}
+	}
+
+	&:checked + label {
+		color: darken($clouds, 40%);
+		&:before {
+			border-color: darken($clouds, 30%);
+		}
+
+		&:after {
+			content: '';
+			display: block;
+		}
+	}
+}
+
+input[type="checkbox"] {
+	& + label {
+		&:before {
+			// this creates the box
+			width: $aw-select-box-size + 2;
+			height: $aw-select-box-size;
+			border-radius: 0 ;
+		}
+	}
+
+	&:checked + label {
+		&:after {
+			// adds the tick
+			@include animation(check 0.8s);
+			@include transform(scaleX(-1) rotate(180deg + -45deg));
+			@include transform-origin(0 0);
+			@include position(absolute, 50% 0 0 4px);
+			border-right: 3px solid darken($clouds, 30%);
+			border-top: 3px solid darken($clouds, 30%);
+			height: $aw-select-box-size / 1.6;
+			width: $aw-select-box-size / 3;
+		}
+	}
+}
+
+
+input[type="radio"] {
+	& + label {
+		&:before {
+			width: $aw-select-box-size;
+			height: $aw-select-box-size;
+			border-radius: $aw-select-box-size / 2;
+		}
+	}
+
+	&:checked + label {
+		&:after {
+			// adds the inner circle
+			@include animation(radio 0.6s);
+			@include position(relative, 0 0 15px 5px);
+			@include transform-origin(center center);
+			width: $aw-select-box-size / 2;
+			height: $aw-select-box-size / 2;
+			border: none;
+			background-color: darken($clouds, 30%);;
+			border-radius: $aw-select-box-size / 2;
+		}
+	}
+}
+
+@include keyframes(check) {
+	0% { height: 0; width: 0; }
+	25% { height: 0; width: $aw-select-box-size / 3; }
+	50% { height: $aw-select-box-size / 1.6; width: $aw-select-box-size / 3; }
+}
+
+@include keyframes(radio) {
+	0% { 
+		@include transform(scale(0));
+	}
+	25% { @include transform(scale(.25)); }
+	50% { @include transform(scale(.50)); }
+	100% { @include transform(scale(1)); }
+}
+

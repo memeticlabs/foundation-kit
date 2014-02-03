@@ -1,8 +1,10 @@
+@import '../bower_components/bower-bourbon/bourbon';
 @import 'aw-variables';
 @import 'aw-mixins';
 @import '../bower_components/foundation/scss/foundation.scss';
 @import '../bower_components/foundation/scss/foundation/functions';
 @import 'aw-base';
+@import 'elements-layout';
 
 .top-bar {
 	letter-spacing: rem-calc(1);
@@ -10,10 +12,10 @@
 		.has-dropdown {
 			li a{
 				background: darken($topbar-bg, 5%);
-				font-family: $helvetica;
+				font-family: $proxima;
 				font-size: $aw-topbar-dropdown-fontsize;
 				font-weight: 400;
-				letter-spacing: 0.1rem;
+				letter-spacing: rem-calc(1);
 				line-height: 3;
 
 				&:hover {

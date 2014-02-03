@@ -11,7 +11,6 @@
     <div id="main" role="main" class="row">
       <div class="columns small-12">
         <section class="aw-top-bar-container">
-          <h2>Navigation</h2>
           <nav data-topbar class="top-bar contain-to-grid">
             <ul class="title-area">
               <li class="name">
@@ -38,18 +37,48 @@
             </section>
           </nav>
         </section>
+        <section class="header-container">
+          <h1>Airwoot</h1>
+          <h2>Dashboard</h2>
+          <h3>Launch Facebook Helpdesk</h3>
+          <h4>Response Time</h4>
+        </section>
+        <div class="row">
+          <div class="columns small-12 large-6"><p>Seamlessly connect your social channels to the app. 
+Get <em>realtime</em> notifications directly in your browser 
+whenever a customer wants to engage with you.</p>
+
+<p><strong>Never</strong> miss out on any messages.</p>
+          </div>
+        </div>
         <section class="buttons container">
-          <h2>Buttons</h2>
           <div class="active-state"><a href="#" class="button tiny">Ticket ID: 8978567</a><a href="#" class="button small">Edit</a><a href="#" class="button medium">Login</a><a href="#" class="button large">Connect Facebook     </a></div>
           <div class="disabled-state"><a class="button tiny disabled">Ticket ID: 8978567</a><a class="button small disabled">Edit</a><a href="#" class="button medium disabled">Login</a><a href="#" class="button large disabled">Connect Facebook</a></div>
         </section>
-        <section class="forms-container">
-          <h2>Forms</h2>
-          <label>First Name</label>
-          <input placeholder="First Name">
-          <label>Last Name</label>
-          <input placeholder="Last Name">
-        </section>
+        <div class="row">
+          <div class="columns small-12 large-6">
+            <section class="forms-container">
+              <section class="text-input-container">
+                <label>First Name</label>
+                <input type="text" placeholder="First Name">
+                <label>Last Name</label>
+                <input type="text" placeholder="Last Name">
+              </section>
+              <section class="checkbox-container">
+                <input type="checkbox" id="facebook" checked>
+                <label for="facebook">Facebook</label>
+                <input type="checkbox" id="twitter">
+                <label for="twitter">Twitter</label>
+                <input type="checkbox" id="admin">
+                <label for="admin">Admin</label>
+              </section>
+              <input type="radio" id="social-network-facebook" name="social-network" value="facebook">
+              <label for="social-network-facebook">Facebook</label>
+              <input type="radio" id="social-network-twitter" name="social-network" value="twitter" checked>
+              <label for="social-network-twitter">Twitter</label>
+            </section>
+          </div>
+        </div>
       </div>
     </div>
     <script src="./bower_components/jquery/jquery.js"> </script>
